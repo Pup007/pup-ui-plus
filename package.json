@@ -1,0 +1,26 @@
+{
+  "name": "pup-ui-plus",
+  "version": "1.0.0",
+  "description": "vue3 component library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vue3",
+    "ui",
+    "component"
+  ],
+  "author": "Potter <aa4790139@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.44.0",
+    "@typescript-eslint/parser": "^5.44.0",
+    "eslint": "^8.28.0",
+    "eslint-plugin-vue": "^9.8.0",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "vue": "^3.2.45"
+  }
+}
