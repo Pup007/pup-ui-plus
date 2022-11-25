@@ -1,0 +1,4 @@
+{
+  "root": true,
+  "extends": ["@pup-ui-plus/eslint-config"]
+}

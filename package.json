@@ -2,25 +2,41 @@
   "name": "pup-ui-plus",
   "version": "1.0.0",
   "description": "vue3 component library",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "vue3",
     "ui",
     "component"
   ],
-  "author": "Potter <aa4790139@gmail.com>",
   "license": "ISC",
+  "author": "Potter <aa4790139@gmail.com>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@pup-ui-plus/components": "workspace:^0.0.1",
+    "@pup-ui-plus/hooks": "workspace:^0.0.1",
+    "@pup-ui-plus/theme-chalk": "workspace:^0.0.1",
+    "vue": "^3.2.45"
+  },
   "devDependencies": {
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "@esbuild-kit/cjs-loader": "^2.4.1",
+    "@pup-ui-plus/eslint-config": "workspace:^0.0.1",
+    "@pup-ui-plus/utils": "workspace:^0.0.1",
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.44.0",
     "eslint": "^8.28.0",
     "eslint-plugin-vue": "^9.8.0",
+    "fast-glob": "^3.2.12",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.8.0",
     "typescript": "^4.9.3"
   },
-  "dependencies": {
-    "vue": "^3.2.45"
+  "lint-staged": {
+    "*.{vue,js,ts,jsx,tsx,md,json}": "eslint --fix"
   }
 }
