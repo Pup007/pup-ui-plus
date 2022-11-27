@@ -1,0 +1,9 @@
+{
+  "name": "@pup-ui-plus/constants",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "Potter <aa4790139@gmail.com>",
+  "main": "index.ts"
+}

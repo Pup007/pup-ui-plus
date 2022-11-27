@@ -1,3 +1,6 @@
+import { ref } from 'vue'
+import type { Ref } from 'vue'
+
 export const defaultNamespace = 'el'
 const statePrefix = 'is-'
 
@@ -22,8 +25,9 @@ const _bem = (
 }
 
 export const useNamespace = (block: string) => {
-  //TODO: 修改到此处?
-  const namespace = useGlobalConfig('namespace', defaultNamespace)
+  //TODO: 暂时先不处理
+  // const namespace = useGlobalConfig('namespace', defaultNamespace)
+  const namespace: Ref<string> = ref(defaultNamespace)
 
   //namespace-block-blockSuffix
   const b = (blockSuffix = '') =>

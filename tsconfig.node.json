@@ -11,5 +11,6 @@
     "internal/**/*.json",
     "scripts/**/*",
     "packages/theme-chalk/*"
-  ]
+  ],
+  "exclude": ["**/__tests__/**", "**/tests/**", "**/dist"]
 }
