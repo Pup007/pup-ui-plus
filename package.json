@@ -34,6 +34,7 @@
     "@esbuild-kit/cjs-loader": "^2.4.1",
     "@pup-ui-plus/eslint-config": "workspace:^0.0.1",
     "@pup-ui-plus/utils": "workspace:^0.0.1",
+    "@types/gulp": "4.0.9",
     "@types/jsdom": "^20.0.1",
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.44.0",

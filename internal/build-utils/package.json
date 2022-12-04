@@ -5,10 +5,15 @@
   "keywords": [],
   "license": "MIT",
   "author": "",
-  "main": "index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "unbuild",
     "dev": "pnpm run stub",
     "stub": "unbuild --stub"
+  },
+  "devDependencies": {
+    "unbuild": "^1.0.1"
   }
 }
