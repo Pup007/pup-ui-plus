@@ -73,6 +73,12 @@ importers:
       unplugin-vue-macros: 1.0.3_xoklzibolihxt3z7zesekvvq4a
       vitest: 0.25.3_jsdom@20.0.3
 
+  internal/build:
+    specifiers:
+      '@pup-ui-plus/build-utils': workspace:^0.0.1
+    devDependencies:
+      '@pup-ui-plus/build-utils': link:../build-utils
+
   internal/build-utils:
     specifiers:
       unbuild: ^1.0.1

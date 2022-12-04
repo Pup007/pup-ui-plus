@@ -12,6 +12,8 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest",
+    "clean": "pnpm run clean:dist && pnpm run -r --parallel clean",
+    "clean:dist": "rimraf dist",
     "build:theme": "pnpm run -C packages/theme-chalk build",
     "prepare": "husky install"
   },
