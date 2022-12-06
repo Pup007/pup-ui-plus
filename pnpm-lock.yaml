@@ -76,8 +76,10 @@ importers:
   internal/build:
     specifiers:
       '@pup-ui-plus/build-utils': workspace:^0.0.1
+      fast-glob: ^3.2.12
     devDependencies:
       '@pup-ui-plus/build-utils': link:../build-utils
+      fast-glob: 3.2.12
 
   internal/build-utils:
     specifiers:

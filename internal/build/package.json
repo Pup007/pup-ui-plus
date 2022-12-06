@@ -14,6 +14,7 @@
     "stub": "unbuild --stub"
   },
   "devDependencies": {
-    "@pup-ui-plus/build-utils": "workspace:^0.0.1"
+    "@pup-ui-plus/build-utils": "workspace:^0.0.1",
+    "fast-glob": "^3.2.12"
   }
 }
