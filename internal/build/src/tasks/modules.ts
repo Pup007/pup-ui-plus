@@ -1,6 +1,14 @@
 import { rollup } from 'rollup'
+import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
+import VueMacros from 'unplugin-vue-macros/rollup'
+import { nodeResolve } from '@rollup/plugin-node-resolve'
+import commonjs from '@rollup/plugin-commonjs'
+import esbuild from 'rollup-plugin-esbuild'
 import glob from 'fast-glob'
 import { epRoot, excludeFiles, pkgRoot } from '@pup-ui-plus/build-utils'
+import { PupUIPlusAlias } from '../plugins/pup-ui-plus-alias'
+import { buildConfigEntries, target } from '../build-info'
 
 export const buildModules = async () => {
   const input = excludeFiles(
@@ -13,8 +21,7 @@ export const buildModules = async () => {
   const bundle = await rollup({
     input,
     plugins: [
-      //TODO: 修改到此处?
-      ElementPlusAlias(),
+      PupUIPlusAlias(),
       VueMacros({
         setupComponent: false,
         setupSFC: false,
@@ -37,6 +44,7 @@ export const buildModules = async () => {
         },
       }),
     ],
+    //TODO: 修改到此处?
     external: await generateExternal({ full: false }),
     treeshake: false,
   })

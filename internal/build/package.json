@@ -14,7 +14,12 @@
     "stub": "unbuild --stub"
   },
   "devDependencies": {
+    "@pup-ui-plus/build-constants": "workspace:^0.0.1",
     "@pup-ui-plus/build-utils": "workspace:^0.0.1",
-    "fast-glob": "^3.2.12"
+    "@vitejs/plugin-vue": "^3.2.0",
+    "@vitejs/plugin-vue-jsx": "^2.1.1",
+    "fast-glob": "^3.2.12",
+    "rollup-plugin-esbuild": "^5.0.0",
+    "unplugin-vue-macros": "^1.0.3"
   }
 }

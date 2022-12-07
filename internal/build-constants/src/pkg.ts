@@ -1,0 +1,5 @@
+export const PKG_PREFIX = '@pup-ui-plus'
+export const PKG_NAME = 'pup-ui-plus'
+export const PKG_CAMELCASE_NAME = 'PupUIPlus'
+export const PKG_CAMELCASE_LOCAL_NAME = 'PupUIPlusLocale'
+export const PKG_BRAND_NAME = 'PupUI Plus'
