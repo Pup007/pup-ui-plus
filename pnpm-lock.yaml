@@ -7,6 +7,7 @@ importers:
       '@commitlint/cli': ^17.3.0
       '@commitlint/config-conventional': ^17.3.0
       '@esbuild-kit/cjs-loader': ^2.4.1
+      '@pnpm/types': ^8.9.0
       '@pup-ui-plus/components': workspace:^0.0.1
       '@pup-ui-plus/constants': workspace:^0.0.1
       '@pup-ui-plus/eslint-config': workspace:^0.0.1
@@ -53,6 +54,7 @@ importers:
       '@commitlint/cli': 17.3.0
       '@commitlint/config-conventional': 17.3.0
       '@esbuild-kit/cjs-loader': 2.4.1
+      '@pnpm/types': 8.9.0
       '@pup-ui-plus/eslint-config': link:internal/eslint-config
       '@pup-ui-plus/utils': link:packages/utils
       '@types/gulp': 4.0.9
@@ -145,6 +147,12 @@ importers:
 
   packages/hooks:
     specifiers: {}
+
+  packages/pup-ui-plus:
+    specifiers:
+      vue: ^3.2.45
+    devDependencies:
+      vue: 3.2.45
 
   packages/theme-chalk:
     specifiers:
@@ -788,6 +796,11 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
+
+  /@pnpm/types/8.9.0:
+    resolution: {integrity: sha512-3MYHYm8epnciApn6w5Fzx6sepawmsNU7l6lvIq+ER22/DPSrr83YMhU/EQWnf4lORn2YyiXFj0FJSyJzEtIGmw==}
+    engines: {node: '>=14.6'}
+    dev: true
 
   /@rollup/plugin-alias/4.0.2_rollup@3.5.1:
     resolution: {integrity: sha512-1hv7dBOZZwo3SEupxn4UA2N0EDThqSSS+wI1St1TNTBtOZvUchyIClyHcnDcjjrReTPZ47Faedrhblv4n+T5UQ==}

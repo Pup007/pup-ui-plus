@@ -8,7 +8,10 @@ import esbuild from 'rollup-plugin-esbuild'
 import glob from 'fast-glob'
 import { epRoot, excludeFiles, pkgRoot } from '@pup-ui-plus/build-utils'
 import { PupUIPlusAlias } from '../plugins/pup-ui-plus-alias'
+import { generateExternal, writeBundles } from '../utils'
 import { buildConfigEntries, target } from '../build-info'
+
+import type { OutputOptions } from 'rollup'
 
 export const buildModules = async () => {
   const input = excludeFiles(
@@ -39,12 +42,13 @@ export const buildModules = async () => {
       esbuild({
         sourceMap: true,
         target,
+        //! 疑问：为啥.vue采用esbuild中的ts编译? 原因：.vue 文件编译后就是ts了，所以采用ts编译
         loaders: {
           '.vue': 'ts',
         },
       }),
     ],
-    //TODO: 修改到此处?
+    //! 过滤掉第三方依赖打包
     external: await generateExternal({ full: false }),
     treeshake: false,
   })

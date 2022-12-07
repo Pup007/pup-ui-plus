@@ -15,6 +15,7 @@
     "clean": "pnpm run clean:dist && pnpm run -r --parallel clean",
     "clean:dist": "rimraf dist",
     "build:theme": "pnpm run -C packages/theme-chalk build",
+    "stub": "pnpm run -r --parallel stub",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -34,6 +35,7 @@
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",
     "@esbuild-kit/cjs-loader": "^2.4.1",
+    "@pnpm/types": "^8.9.0",
     "@pup-ui-plus/eslint-config": "workspace:^0.0.1",
     "@pup-ui-plus/utils": "workspace:^0.0.1",
     "@types/gulp": "4.0.9",
