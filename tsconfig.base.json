@@ -4,7 +4,7 @@
     "target": "es2018",
     "module": "esnext",
     "baseUrl": ".",
-    "sourceMap": true,
+    "sourceMap": false,
     "moduleResolution": "node",
     "allowJs": false,
     "strict": true,
@@ -16,9 +16,7 @@
     "rootDir": ".",
     "types": [],
     "paths": {
-      "@pup-ui-plus/*": [
-        "packages/*"
-      ]
+      "@pup-ui-plus/*": ["packages/*"]
     }
   }
 }
