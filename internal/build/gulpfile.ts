@@ -17,11 +17,11 @@ export default series(
   withTaskName('createOutput', () => mkdir(epOutput, { recursive: true })),
 
   parallel(
-    runTask('buildModules')
-    //TODO: 修改到此处?
-    /*  runTask('buildFullBundle'),
-     runTask('generateTypesDefinitions'),
-     runTask('buildHelper'),
+    //! 说明：打包packages所有模块代码
+    runTask('buildModules'),
+    runTask('buildFullBundle'),
+    runTask('generateTypesDefinitions')
+    /*    runTask('buildHelper'),
      series(
        withTaskName('buildThemeChalk', () =>
          run('pnpm run -C packages/theme-chalk build')
@@ -33,4 +33,5 @@ export default series(
   // parallel(copyTypesDefinitions, copyFiles)
 )
 
+//! 说明：需要导出所有任务，否则gulp会包找不到对应执行任务
 export * from './src'

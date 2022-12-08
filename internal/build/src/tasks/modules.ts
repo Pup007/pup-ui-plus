@@ -21,6 +21,7 @@ export const buildModules = async () => {
       onlyFiles: true,
     })
   )
+
   const bundle = await rollup({
     input,
     plugins: [

@@ -10,7 +10,9 @@
     "internal/**/*",
     "internal/**/*.json",
     "scripts/**/*",
-    "packages/theme-chalk/*"
+    "packages/theme-chalk/*",
+    "packages/pup-ui-plus/version.ts",
+    "packages/pup-ui-plus/package.json"
   ],
   "exclude": ["**/__tests__/**", "**/tests/**", "**/dist"]
 }
