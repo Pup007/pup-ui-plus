@@ -1,0 +1,14 @@
+{
+  "name": "@pup-ui-plus/locale",
+  "version": "0.0.1",
+  "description": "Pup UI Plus locale",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "main": "index.ts",
+  "module": "index.ts",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

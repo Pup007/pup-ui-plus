@@ -1,1 +1,1 @@
-console.log('xxx')
+import installer from './defaults'
