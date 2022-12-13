@@ -1,4 +1,4 @@
-import type { SFCInstallWithContext, SFCWithInstall } from '../typescript'
+import type { SFCInstallWithContext, SFCWithInstall } from './typescript'
 import type { App } from 'vue'
 
 export const withInstall = <T, E extends Record<string, any>>(

@@ -2,6 +2,12 @@ import { defineComponent, renderSlot, watch } from 'vue'
 import { buildProps, definePropType } from '@pup-ui-plus/utils'
 import { provideGlobalConfig, useSizeProp } from '@pup-ui-plus/hooks'
 
+import type { ExtractPropTypes } from 'vue'
+import type { MessageConfigContext } from '@pup-ui-plus/components/message'
+import type { Language } from '@pup-ui-plus/locale'
+import type { ButtonConfigContext } from '@pup-ui-plus/components/button'
+import type { ExperimentalFeatures } from '@pup-ui-plus/tokens'
+
 export const messageConfig: MessageConfigContext = {}
 
 export const configProviderProps = buildProps({
@@ -42,6 +48,8 @@ export const configProviderProps = buildProps({
     default: 'el',
   },
 } as const)
+
+export type ConfigProviderProps = ExtractPropTypes<typeof configProviderProps>
 
 const ConfigProvider = defineComponent({
   name: 'ElConfigProvider',

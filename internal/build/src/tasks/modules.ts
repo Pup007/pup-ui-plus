@@ -22,6 +22,9 @@ export const buildModules = async () => {
     })
   )
 
+  console.log('cwd:', pkgRoot)
+  console.log('input:', input)
+
   const bundle = await rollup({
     input,
     plugins: [
@@ -53,9 +56,14 @@ export const buildModules = async () => {
     external: await generateExternal({ full: false }),
     treeshake: false,
   })
-  await writeBundles(
-    bundle,
-    buildConfigEntries.map(([module, config]): OutputOptions => {
+
+  console.log(
+    'buildConfigEntries:',
+    JSON.stringify(buildConfigEntries, null, 2)
+  )
+
+  const outConfig = buildConfigEntries.map(
+    ([module, config]): OutputOptions => {
       return {
         format: config.format,
         dir: config.output.path,
@@ -65,6 +73,10 @@ export const buildModules = async () => {
         sourcemap: true,
         entryFileNames: `[name].${config.ext}`,
       }
-    })
+    }
   )
+
+  console.log('outConfig:', JSON.stringify(outConfig, null, 2))
+
+  await writeBundles(bundle, outConfig)
 }

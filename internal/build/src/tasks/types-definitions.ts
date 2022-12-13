@@ -2,9 +2,9 @@ import process from 'process'
 import path from 'path'
 import { mkdir, readFile, writeFile } from 'fs/promises'
 import consola from 'consola'
-import chalk from 'chalk'
-import glob from 'fast-glob'
 import * as vueCompiler from 'vue/compiler-sfc'
+import glob from 'fast-glob'
+import chalk from 'chalk'
 import { Project } from 'ts-morph'
 import {
   buildOutput,
@@ -14,7 +14,6 @@ import {
   projRoot,
 } from '@pup-ui-plus/build-utils'
 import { pathRewriter } from '../utils'
-
 import type { CompilerOptions, SourceFile } from 'ts-morph'
 
 const TSCONFIG_PATH = path.resolve(projRoot, 'tsconfig.web.json')

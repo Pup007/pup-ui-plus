@@ -1,8 +1,15 @@
 import { computed, getCurrentInstance, inject, provide, ref, unref } from 'vue'
 
+import { configProviderContextKey } from '@pup-ui-plus/tokens'
+import { debugWarn, keysOf } from '@pup-ui-plus/utils'
+import type { ConfigProviderContext } from '@pup-ui-plus/tokens'
 import type { App, Ref } from 'vue'
 import type { MaybeRef } from '@vueuse/core'
-import type { ConfigProviderContext } from '@pup-ui-plus/tokens'
+
+// this is meant to fix global methods like `ElMessage(opts)`, this way we can inject current locale
+// into the component as default injection value.
+// refer to: https://github.com/element-plus/element-plus/issues/2610#issuecomment-887965266
+const globalConfig = ref<ConfigProviderContext>()
 
 export function useGlobalConfig<
   K extends keyof ConfigProviderContext,
@@ -33,7 +40,6 @@ export const provideGlobalConfig = (
 ) => {
   const inSetup = !!getCurrentInstance()
   const oldConfig = inSetup ? useGlobalConfig() : undefined
-  //TODO: 修改到此处
   const provideFn = app?.provide ?? (inSetup ? provide : undefined)
   if (!provideFn) {
     debugWarn(
@@ -53,4 +59,16 @@ export const provideGlobalConfig = (
     globalConfig.value = context.value
   }
   return context
+}
+
+const mergeConfig = (
+  a: ConfigProviderContext,
+  b: ConfigProviderContext
+): ConfigProviderContext => {
+  const keys = [...new Set([...keysOf(a), ...keysOf(b)])]
+  const obj: Record<string, any> = {}
+  for (const key of keys) {
+    obj[key] = b[key] ?? a[key]
+  }
+  return obj
 }

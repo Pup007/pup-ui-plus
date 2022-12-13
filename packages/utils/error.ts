@@ -14,6 +14,11 @@ export function throwError(scope: string, m: string): never {
 export function debugWarn(err: Error): void
 export function debugWarn(scope: string, message: string): void
 export function debugWarn(scope: string | Error, message?: string): void {
+  const error: Error = isString(scope)
+    ? new ElementPlusError(`[${scope}] ${message}`)
+    : scope
+  console.warn(error)
+
   //TODO: 遗留问题，TS2591: Cannot find name 'process' 安装@types/node 仍然会包这错误
   /* if (process.env.NODE_ENV !== 'production') {
     const error: Error = isString(scope)

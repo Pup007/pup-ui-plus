@@ -50,20 +50,20 @@ export default series(
 
   parallel(
     //! 说明：打包packages所有模块代码
-    runTask('buildModules'),
-    runTask('buildFullBundle'),
-    runTask('generateTypesDefinitions'),
+    runTask('buildModules')
+    // runTask('buildFullBundle'),
+    // runTask('generateTypesDefinitions'),
     //! TODO: 文档编译先关闭
     // runTask('buildHelper'),
-    series(
-      withTaskName('buildThemeChalk', () =>
-        run('pnpm run -C packages/theme-chalk build')
-      ),
-      copyFullStyle
-    )
-  ),
+    // series(
+    //   withTaskName('buildThemeChalk', () =>
+    //     run('pnpm run -C packages/theme-chalk build')
+    //   ),
+    //   copyFullStyle
+    // )
+  )
 
-  parallel(copyTypesDefinitions, copyFiles)
+  // parallel(copyTypesDefinitions, copyFiles)
 )
 
 //! 说明：需要导出所有任务，否则gulp会包找不到对应执行任务
