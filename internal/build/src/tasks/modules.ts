@@ -22,9 +22,6 @@ export const buildModules = async () => {
     })
   )
 
-  console.log('cwd:', pkgRoot)
-  console.log('input:', input)
-
   const bundle = await rollup({
     input,
     plugins: [
@@ -57,26 +54,20 @@ export const buildModules = async () => {
     treeshake: false,
   })
 
-  console.log(
-    'buildConfigEntries:',
-    JSON.stringify(buildConfigEntries, null, 2)
-  )
-
-  const outConfig = buildConfigEntries.map(
-    ([module, config]): OutputOptions => {
+  await writeBundles(
+    bundle,
+    buildConfigEntries.map(([module, config]): OutputOptions => {
       return {
         format: config.format,
         dir: config.output.path,
         exports: module === 'cjs' ? 'named' : undefined,
+        //!说明: 保留目录结构, 设置成false会导致所有打包文件都放置在根目录下
         preserveModules: true,
-        preserveModulesRoot: epRoot,
+        //! 说明：此处需要传packages的根路径，而不是epRoot根路径，否则会导致多附带一层packages目录。不知道element-plus 为啥设置成epRoot可以(未找到区别的地方)
+        preserveModulesRoot: pkgRoot,
         sourcemap: true,
         entryFileNames: `[name].${config.ext}`,
       }
-    }
+    })
   )
-
-  console.log('outConfig:', JSON.stringify(outConfig, null, 2))
-
-  await writeBundles(bundle, outConfig)
 }

@@ -5,8 +5,14 @@
   "keywords": [],
   "license": "ISC",
   "author": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "main": "index.ts",
+  "module": "index.ts",
+  "types": "index.d.ts",
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "dependencies": {
+    "@pup-ui-plus/tokens": "workspace:^0.0.1",
+    "@pup-ui-plus/utils": "workspace:^0.0.1"
   }
 }
