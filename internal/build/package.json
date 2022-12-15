@@ -14,18 +14,20 @@
     "stub": "unbuild --stub"
   },
   "dependencies": {
-    "esbuild": "^0.16.1",
-    "rollup": "^2.75.7",
     "vue": "^3.2.45"
   },
   "devDependencies": {
     "@pup-ui-plus/build-constants": "workspace:^0.0.1",
     "@pup-ui-plus/build-utils": "workspace:^0.0.1",
-    "@vitejs/plugin-vue": "^3.2.0",
-    "@vitejs/plugin-vue-jsx": "^2.1.1",
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@vitejs/plugin-vue": "2.3.3",
+    "@vitejs/plugin-vue-jsx": "1.3.10",
+    "esbuild": "^0.16.1",
     "fast-glob": "^3.2.12",
-    "rollup-plugin-esbuild": "^5.0.0",
+    "rollup": "^2.75.7",
+    "rollup-plugin-esbuild": "^4.9.1",
     "ts-morph": "^17.0.1",
-    "unplugin-vue-macros": "^1.0.3"
+    "unplugin-vue-macros": "^0.11.2"
   }
 }

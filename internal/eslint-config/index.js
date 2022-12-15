@@ -250,7 +250,7 @@ module.exports = defineConfig({
             position: 'before',
           },
           {
-            pattern: '@element-plus/**',
+            pattern: '@pup-ui-plus/**',
             group: 'internal',
           },
         ],

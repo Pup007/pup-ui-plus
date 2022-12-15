@@ -49,7 +49,12 @@ export const buildModules = async () => {
         },
       }),
     ],
-    //! 过滤掉第三方依赖打包
+    /*
+    ! 过滤掉第三方依赖打包，特别注意：packages/pup-ui-plus 由于是要整个组件库的包，所以需要用的到包都安装上，
+    ! 否则会导致打包是会把库代码也给打包了，导致生成的目录多了一层packages，变成：dist/pup-ui-plus/es/packages/components 形式（多了一层packages）
+    ! 原因：rollup 中的代码提取公共路径逻辑 inputBase = commondir(getAbsoluteEntryModulePaths(chunks))，会直接定位到根目录下，导致与配置的preserveModulesRoot不一致
+    !      导致最后输出目录多了一层packages
+    */
     external: await generateExternal({ full: false }),
     treeshake: false,
   })
@@ -63,8 +68,8 @@ export const buildModules = async () => {
         exports: module === 'cjs' ? 'named' : undefined,
         //!说明: 保留目录结构, 设置成false会导致所有打包文件都放置在根目录下
         preserveModules: true,
-        //! 说明：此处需要传packages的根路径，而不是epRoot根路径，否则会导致多附带一层packages目录。不知道element-plus 为啥设置成epRoot可以(未找到区别的地方)
-        preserveModulesRoot: pkgRoot,
+        //! 说明：确实是传epRoot根路径
+        preserveModulesRoot: epRoot,
         sourcemap: true,
         entryFileNames: `[name].${config.ext}`,
       }

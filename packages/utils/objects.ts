@@ -3,6 +3,7 @@ import type { Arrayable } from '.'
 
 export { hasOwn } from '@vue/shared'
 
+//TODO: 添加T extends Object 约束，打包和eslint 冲突
 export const keysOf = <T>(arr: T) => Object.keys(arr) as Array<keyof T>
 
 export const getProp = <T = any>(
