@@ -37,6 +37,7 @@
     "@commitlint/config-conventional": "^17.3.0",
     "@esbuild-kit/cjs-loader": "^2.4.1",
     "@pnpm/types": "^8.9.0",
+    "@pup-ui-plus/build-utils": "workspace:^0.0.1",
     "@pup-ui-plus/eslint-config": "workspace:^0.0.1",
     "@pup-ui-plus/utils": "workspace:^0.0.1",
     "@types/gulp": "4.0.9",
