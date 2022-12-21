@@ -3,7 +3,8 @@ import type { Arrayable } from '.'
 
 export { hasOwn } from '@vue/shared'
 
-//TODO: 添加T extends Object 约束，打包和eslint 冲突
+//! 说明：添加T extends Object 约束，上传代码遭遇eslint报错，不添加T extends Object 又会导致typeCheck 报错。
+//! 解决办法：ts-morph 切换至14.0.0的版本即可
 export const keysOf = <T>(arr: T) => Object.keys(arr) as Array<keyof T>
 
 export const getProp = <T = any>(

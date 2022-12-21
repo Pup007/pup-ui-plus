@@ -2,11 +2,11 @@ import type { vShow } from 'vue'
 import type { INSTALLED_KEY } from '@pup-ui-plus/constants'
 
 declare global {
-  /* const process: {
+  const process: {
     env: {
       NODE_ENV: string
     }
-  } */
+  }
 
   namespace JSX {
     interface IntrinsicAttributes {
