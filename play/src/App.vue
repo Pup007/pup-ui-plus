@@ -4,7 +4,9 @@ import { ElIcon } from '@pup-ui-plus/components'
 
 <template>
   <div>
-    <el-icon>el-icon</el-icon>
+    <el-icon size="100">
+      <add-location color="#ff0000" size="100"></add-location>
+    </el-icon>
   </div>
 </template>
 

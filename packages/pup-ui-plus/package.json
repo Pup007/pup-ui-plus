@@ -29,6 +29,7 @@
     "vue": "^3.2.45"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.0.10",
     "@pup-ui-plus/components": "workspace:^0.0.1",
     "@pup-ui-plus/hooks": "workspace:^0.0.1",
     "@pup-ui-plus/tokens": "workspace:^0.0.1",
