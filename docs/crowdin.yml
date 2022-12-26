@@ -23,13 +23,13 @@ files: [
       # Source files filter
       # e.g. "/resources/en/*.json"
       #
-      'source': '',
+      'source': '.vitepress/crowdin/en-US/**/*.json',
 
       #
       # Where translations will be placed
       # e.g. "/resources/%two_letters_code%/%original_file_name%"
       #
-      'translation': '',
+      'translation': '.vitepress/crowdin/%locale%/**/%original_file_name%',
       #
       # Files or directories for ignore
       # e.g. ["/**/?.txt", "/**/[0-9].txt", "/**/*\?*.txt"]
@@ -124,5 +124,10 @@ files: [
       # e.g. "identifier,source_phrase,context,uk,ru,fr"
       #
       # "scheme" : "",
+    },
+    {
+      'source': 'en-US/**/*.md',
+      # TODO: 这配置是什么?
+      'translation': '%locale%/**/%original_file_name%',
     },
   ]
