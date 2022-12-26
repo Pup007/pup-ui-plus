@@ -11,10 +11,19 @@
     "serve": "NODE_ENV=production && vitepress serve ."
   },
   "dependencies": {
+    "@docsearch/js": "^3.1.0",
+    "@element-plus/icons-vue": "^2.0.9",
+    "@vue/shared": "^3.2.37",
+    "@vueuse/core": "^9.1.0",
+    "markdown-it": "^13.0.1",
     "normalize.css": "^8.0.1",
-    "pup-ui-plus": "workspace:^1.0.0"
+    "nprogress": "^0.2.0",
+    "prism-theme-vars": "^0.2.3",
+    "pup-ui-plus": "workspace:^1.0.0",
+    "vue": "^3.2.37"
   },
   "devDependencies": {
-    "vitepress": "0.22.4"
+    "@crowdin/cli": "^3.7.8",
+    "vitepress": "^0.22.4"
   }
 }
