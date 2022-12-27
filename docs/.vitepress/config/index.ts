@@ -1,2 +1,5 @@
 export * from './features'
 export * from './head'
+export * from './plugins'
+export * from './nav'
+export * from './sidebars'
