@@ -96,6 +96,7 @@ importers:
       '@pup-ui-plus/build-utils': workspace:^0.0.1
       '@vue/shared': ^3.2.37
       '@vueuse/core': ^9.1.0
+      chalk: 4.1.2
       escape-html: ^1.0.3
       markdown-it: ^13.0.1
       markdown-it-container: ^3.0.0
@@ -120,6 +121,7 @@ importers:
       '@crowdin/cli': 3.9.1
       '@pup-ui-plus/build-constants': link:../internal/build-constants
       '@pup-ui-plus/build-utils': link:../internal/build-utils
+      chalk: 4.1.2
       escape-html: 1.0.3
       markdown-it-container: 3.0.0
       vitepress: 0.22.4_2r467mdhb7mblpaox4bg7fatdi
