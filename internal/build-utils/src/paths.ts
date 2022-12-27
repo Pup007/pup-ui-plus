@@ -11,4 +11,12 @@ export const buildOutput = resolve(projRoot, 'dist')
 /** `/dist/pup-ui-plus` */
 export const epOutput = resolve(buildOutput, 'pup-ui-plus')
 
+/* packages/pup-ui-plus/package.json */
 export const epPackage = resolve(epRoot, 'package.json')
+
+// Docs
+export const docsDirName = 'docs'
+/* docs */
+export const docRoot = resolve(projRoot, docsDirName)
+/* docs/.vitepress */
+export const vpRoot = resolve(docRoot, '.vitepress')

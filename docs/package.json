@@ -6,9 +6,10 @@
   "license": "ISC",
   "author": "Potter<aa4790139@gmail.com>",
   "scripts": {
-    "dev": "vitepress dev .",
+    "dev": "pnpm gen-locale && vitepress dev .",
     "build": "NODE_ENV=production && vitepress build .",
-    "serve": "NODE_ENV=production && vitepress serve ."
+    "serve": "NODE_ENV=production && vitepress serve .",
+    "gen-locale": "rimraf .vitepress/i18n && tsx .vitepress/build/crowdin-generate.ts"
   },
   "dependencies": {
     "@docsearch/js": "^3.1.0",
@@ -24,6 +25,8 @@
   },
   "devDependencies": {
     "@crowdin/cli": "^3.7.8",
+    "@pup-ui-plus/build-constants": "workspace:^0.0.1",
+    "@pup-ui-plus/build-utils": "workspace:^0.0.1",
     "vitepress": "^0.22.4"
   }
 }
