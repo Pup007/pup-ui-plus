@@ -6,7 +6,7 @@
   "license": "ISC",
   "author": "Potter<aa4790139@gmail.com>",
   "scripts": {
-    "dev": "pnpm gen-locale && vitepress dev .",
+    "dev": "pnpm gen-locale && vitepress dev . --port 4001",
     "build": "NODE_ENV=production && vitepress build .",
     "serve": "NODE_ENV=production && vitepress serve .",
     "gen-locale": "rimraf .vitepress/i18n && tsx .vitepress/build/crowdin-generate.ts"
