@@ -20,3 +20,5 @@ export const docsDirName = 'docs'
 export const docRoot = resolve(projRoot, docsDirName)
 /* docs/.vitepress */
 export const vpRoot = resolve(docRoot, '.vitepress')
+/* docs/package.json */
+export const docPackage = resolve(docRoot, 'package.json')
