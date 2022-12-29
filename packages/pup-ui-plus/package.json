@@ -30,9 +30,6 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.10",
-    "@pup-ui-plus/components": "workspace:^0.0.1",
-    "@pup-ui-plus/hooks": "workspace:^0.0.1",
-    "@pup-ui-plus/tokens": "workspace:^0.0.1",
     "@types/lodash": "^4.14.182",
     "@types/lodash-es": "^4.17.6",
     "@vueuse/core": "^9.6.0",

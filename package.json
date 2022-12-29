@@ -1,6 +1,6 @@
 {
   "name": "pup-ui-plus",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "vue3 component library",
   "keywords": [
     "vue3",
@@ -20,10 +20,11 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@pup-ui-plus/components": "workspace:^0.0.1",
-    "@pup-ui-plus/constants": "workspace:^0.0.1",
-    "@pup-ui-plus/hooks": "workspace:^0.0.1",
-    "@pup-ui-plus/theme-chalk": "workspace:^0.0.1",
+    "@pup-ui-plus/components": "workspace:*",
+    "@pup-ui-plus/constants": "workspace:*",
+    "@pup-ui-plus/hooks": "workspace:*",
+    "@pup-ui-plus/theme-chalk": "workspace:*",
+    "@pup-ui-plus/tokens": "workspace:*",
     "@types/lodash": "^4.14.190",
     "@types/lodash-es": "^4.17.6",
     "@vueuse/core": "^9.6.0",
@@ -37,9 +38,9 @@
     "@commitlint/config-conventional": "^17.3.0",
     "@esbuild-kit/cjs-loader": "^2.4.1",
     "@pnpm/types": "^8.9.0",
-    "@pup-ui-plus/build-utils": "workspace:^0.0.1",
-    "@pup-ui-plus/eslint-config": "workspace:^0.0.1",
-    "@pup-ui-plus/utils": "workspace:^0.0.1",
+    "@pup-ui-plus/build-utils": "workspace:*",
+    "@pup-ui-plus/eslint-config": "workspace:*",
+    "@pup-ui-plus/utils": "workspace:*",
     "@types/gulp": "4.0.9",
     "@types/jsdom": "^20.0.1",
     "@types/node": "*",
