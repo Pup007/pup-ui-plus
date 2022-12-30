@@ -6,8 +6,6 @@ import { features, head, mdPlugin, nav, sidebars } from './config'
 
 import type { UserConfig } from 'vitepress'
 
-console.log("nav:", nav);
-
 const buildTransformers = () => {
   const transformer = () => {
     return {

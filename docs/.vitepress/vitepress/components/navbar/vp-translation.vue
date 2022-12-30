@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import VPLink from '../common/vp-link.vue'
+// import VPLink from '../common/vp-link.vue'
 import { useTranslation } from '../../composables/translation'
 
 const { switchLang, languageMap, langs, lang, helpTranslate } = useTranslation()
@@ -8,7 +8,7 @@ const { switchLang, languageMap, langs, lang, helpTranslate } = useTranslation()
 <template>
   <div class="translation-container">
     <ClientOnly>
-      <ElPopover
+      <!-- <ElPopover
         :show-arrow="false"
         trigger="hover"
         popper-class="translation-popup"
@@ -31,7 +31,7 @@ const { switchLang, languageMap, langs, lang, helpTranslate } = useTranslation()
             {{ helpTranslate }}
           </VPLink>
         </div>
-      </ElPopover>
+      </ElPopover> -->
     </ClientOnly>
   </div>
 </template>
