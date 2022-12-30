@@ -15,7 +15,7 @@ import {
   getPackageDependencies,
   projRoot,
 } from '@pup-ui-plus/build-utils'
-// import { MarkdownTransform } from './.vitepress/plugins/markdown-transform'
+import { MarkdownTransform } from './.vitepress/plugins/markdown-transform'
 
 import type { Alias } from 'vite'
 
@@ -99,7 +99,7 @@ export default defineConfig(async ({ mode }) => {
         autoInstall: true,
       }),
       UnoCSS(),
-      // MarkdownTransform(),
+      MarkdownTransform(),
       Inspect(),
       mkcert(),
     ],

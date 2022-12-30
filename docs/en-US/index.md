@@ -4,6 +4,6 @@ page: true
 lang: en-US
 ---
 
-<ClientOnly>
+<!-- <ClientOnly>
   <ParallaxHome />
-</ClientOnly>
+</ClientOnly> -->
