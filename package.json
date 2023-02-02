@@ -16,6 +16,9 @@
     "clean:dist": "rimraf dist",
     "build:theme": "pnpm run -C packages/theme-chalk build",
     "build": "pnpm run -C internal/build start",
+    "docs:dev": "pnpm run -C docs dev",
+    "docs:build": "pnpm run -C docs build",
+    "docs:serve": "pnpm run -C docs serve",
     "stub": "pnpm run -r --parallel stub",
     "prepare": "husky install"
   },

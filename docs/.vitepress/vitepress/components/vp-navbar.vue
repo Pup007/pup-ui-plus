@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { computed } from 'vue'
 import { inBrowser, useData } from 'vitepress'
+import { computed } from 'vue'
 
-import VPNavbarSearch from './navbar/vp-search.vue'
+import VPNavbarHamburger from './navbar/vp-hamburger.vue'
 import VPNavbarMenu from './navbar/vp-menu.vue'
+import VPNavbarSearch from './navbar/vp-search.vue'
+import VPNavbarSocialLinks from './navbar/vp-social-links.vue'
 import VPNavbarThemeToggler from './navbar/vp-theme-toggler.vue'
 import VPNavbarTranslation from './navbar/vp-translation.vue'
-import VPNavbarSocialLinks from './navbar/vp-social-links.vue'
-import VPNavbarHamburger from './navbar/vp-hamburger.vue'
 
 defineProps<{
   fullScreen: boolean
