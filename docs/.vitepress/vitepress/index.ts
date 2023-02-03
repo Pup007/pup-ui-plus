@@ -1,13 +1,20 @@
 import 'normalize.css'
 
-import VPApp from './components/vp-app.vue'
-import VPDemo from './components/vp-demo.vue'
-import IconList from './components/globals/icons.vue'
+// for dev
+// reset
+import '../../../packages/theme-chalk/src/reset.scss'
+import '../../../packages/theme-chalk/src/index.scss'
+// for dark mode
+import '../../../packages/theme-chalk/src/dark/css-vars.scss'
 
 import './styles/css-vars.scss'
 import './styles/app.scss'
 
 import 'uno.css'
+
+import VPApp from './components/vp-app.vue'
+import VPDemo from './components/vp-demo.vue'
+import IconList from './components/globals/icons.vue'
 
 import type { Component } from 'vue'
 
