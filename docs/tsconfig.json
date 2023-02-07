@@ -10,9 +10,13 @@
     "strict": true,
     "noImplicitAny": false,
     "skipLibCheck": true,
-    "lib": ["WebWorker"],
+    "lib": [
+      "WebWorker",
+      // ?? 配置WebWorker 使用DOM API提示找不到，暂未找到原因，先添加DOM环境解决
+      "DOM"
+    ],
     "paths": {
-      "pup-ui-plus": ["../packages/pup-ui-plus"],
+      "element-plus": ["../packages/element-plus"],
       "~/*": ["./.vitepress/vitepress/*"]
     },
     "types": ["../typings/components"],
