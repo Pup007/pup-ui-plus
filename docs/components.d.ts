@@ -17,7 +17,6 @@ declare module '@vue/runtime-core' {
     HomeSponsors: typeof import('./.vitepress/vitepress/components/home/home-sponsors.vue')['default']
     Icons: typeof import('./.vitepress/vitepress/components/globals/icons.vue')['default']
     IRiExternalLinkLine: typeof import('~icons/ri/external-link-line')['default']
-    IRiTranslate2: typeof import('~icons/ri/translate2')['default']
     LeftBottomLayerSvg: typeof import('./.vitepress/vitepress/components/home/svg/left-bottom-layer-svg.vue')['default']
     LeftLayerSvg: typeof import('./.vitepress/vitepress/components/home/svg/left-layer-svg.vue')['default']
     Light: typeof import('./.vitepress/vitepress/components/icons/light.vue')['default']
