@@ -23,6 +23,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@popperjs/core": "npm:@sxzz/popperjs-es@^2.11.7",
     "@pup-ui-plus/components": "workspace:*",
     "@pup-ui-plus/constants": "workspace:*",
     "@pup-ui-plus/hooks": "workspace:*",
@@ -66,7 +67,8 @@
     "tsx": "^3.12.1",
     "typescript": "^4.9.3",
     "unplugin-vue-macros": "^1.0.3",
-    "vitest": "^0.25.3"
+    "vitest": "^0.25.3",
+    "vue-router": "4.0.16"
   },
   "lint-staged": {
     "*.{vue,js,ts,jsx,tsx,md,json}": "eslint --fix"

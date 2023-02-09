@@ -24,6 +24,8 @@ declare module '@vue/runtime-core' {
     PeopleSvg: typeof import('./.vitepress/vitepress/components/home/svg/people-svg.vue')['default']
     ResourceSvg: typeof import('./.vitepress/vitepress/components/home/svg/resource-svg.vue')['default']
     RightLayerSvg: typeof import('./.vitepress/vitepress/components/home/svg/right-layer-svg.vue')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
     ScreenSvg: typeof import('./.vitepress/vitepress/components/home/svg/screen-svg.vue')['default']
     SponsorList: typeof import('./.vitepress/vitepress/components/home/sponsor-list.vue')['default']
     SponsorsButton: typeof import('./.vitepress/vitepress/components/sponsors/sponsors-button.vue')['default']
