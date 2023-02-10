@@ -116,7 +116,7 @@ importers:
       normalize.css: ^8.0.1
       nprogress: ^0.2.0
       prism-theme-vars: ^0.2.3
-      pup-ui-plus: npm:pup-ui-plus@latest
+      pup-ui-plus: workspace:0.0.2-dev.1
       unocss: 0.33.5
       unplugin-icons: ^0.14.6
       unplugin-vue-components: ^0.20.1
@@ -260,19 +260,25 @@ importers:
 
   packages/pup-ui-plus:
     specifiers:
+      '@ctrl/tinycolor': ^3.4.1
       '@element-plus/icons-vue': ^2.0.10
+      '@popperjs/core': npm:@sxzz/popperjs-es@^2.11.7
       '@types/lodash': ^4.14.182
       '@types/lodash-es': ^4.17.6
       '@vueuse/core': ^9.6.0
+      async-validator: ^4.2.5
       lodash: ^4.17.21
       lodash-es: ^4.17.21
       lodash-unified: ^1.0.2
       vue: ^3.2.45
     dependencies:
+      '@ctrl/tinycolor': registry.npmjs.org/@ctrl/tinycolor/3.5.0
       '@element-plus/icons-vue': 2.0.10_vue@3.2.45
+      '@popperjs/core': registry.npmjs.org/@sxzz/popperjs-es/2.11.7
       '@types/lodash': 4.14.190
       '@types/lodash-es': 4.17.6
       '@vueuse/core': 9.6.0_vue@3.2.45
+      async-validator: registry.npmjs.org/async-validator/4.2.5
       lodash: 4.17.21
       lodash-es: 4.17.21
       lodash-unified: 1.0.3_3ib2ivapxullxkx3xftsimdk7u
@@ -8658,6 +8664,13 @@ packages:
     dependencies:
       '@babel/highlight': 7.18.6
 
+  registry.npmjs.org/@ctrl/tinycolor/3.5.0:
+    resolution: {integrity: sha512-tlJpwF40DEQcfR/QF+wNMVyGMaO9FQp6Z1Wahj4Gk3CJQYHwA2xVG7iKDFdW6zuxZY9XWOpGcfNCTsX4McOsOg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@ctrl/tinycolor/-/tinycolor-3.5.0.tgz}
+    name: '@ctrl/tinycolor'
+    version: 3.5.0
+    engines: {node: '>=10'}
+    dev: false
+
   registry.npmjs.org/@esbuild/android-arm/0.15.15:
     resolution: {integrity: sha512-JJjZjJi2eBL01QJuWjfCdZxcIgot+VoK6Fq7eKF9w4YHm9hwl7nhBR1o2Wnt/WcANk5l9SkpvrldW1PLuXxcbw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@esbuild/android-arm/-/android-arm-0.15.15.tgz}
     name: '@esbuild/android-arm'
@@ -8937,6 +8950,12 @@ packages:
     resolution: {integrity: sha512-Ccy0NlLkzr0Ex2FKvh2X+OyERHXJ88XJ1MXtsI9y9fGexlaXaVTPzBCRBwIxFkORuOb+uBqeu+RqnpgYTEZRUQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@sxzz/popperjs-es/-/popperjs-es-2.11.7.tgz}
     name: '@sxzz/popperjs-es'
     version: 2.11.7
+    dev: false
+
+  registry.npmjs.org/async-validator/4.2.5:
+    resolution: {integrity: sha512-7HhHjtERjqlNbZtqNqy2rckN/SpOOlmDliet+lP7k+eKZEjPk3DgyeU9lIXLdeLz0uBbbVp+9Qdow9wJWgwwfg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/async-validator/-/async-validator-4.2.5.tgz}
+    name: async-validator
+    version: 4.2.5
     dev: false
 
   registry.npmjs.org/bindings/1.5.0:

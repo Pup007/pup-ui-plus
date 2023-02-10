@@ -1,3 +1,4 @@
+import { NOOP } from '@vue/shared'
 import type { SFCInstallWithContext, SFCWithInstall } from './typescript'
 import type { App } from 'vue'
 
@@ -26,4 +27,10 @@ export const withInstallFunction = <T>(fn: T, name: string) => {
   }
 
   return fn as SFCInstallWithContext<T>
+}
+
+export const withNoopInstall = <T>(component: T) => {
+  ;(component as SFCWithInstall<T>).install = NOOP
+
+  return component as SFCWithInstall<T>
 }
