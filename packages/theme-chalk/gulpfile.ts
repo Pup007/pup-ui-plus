@@ -82,7 +82,7 @@ export function copyThemeChalkSource() {
 
 export const build = parallel(
   copyThemeChalkSource,
-  series(buildThemeChalk, /* buildDarkCssVars, */ copyThemeChalkBundle)
+  series(buildThemeChalk, buildDarkCssVars, copyThemeChalkBundle)
 )
 
 export default build
