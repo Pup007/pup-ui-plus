@@ -4,7 +4,7 @@ import { useData, useRoute } from 'vitepress'
 import { useSidebar } from '../composables/sidebar'
 
 import VPHeroContent from './vp-hero-content.vue'
-// import VPDocContent from './vp-doc-content.vue'
+import VPDocContent from './vp-doc-content.vue'
 
 const { frontmatter } = useData()
 const isHeroPost = computed(() => frontmatter.value.page === true)
@@ -15,10 +15,10 @@ const { hasSidebar } = useSidebar()
   <main :class="{ 'page-content': true, 'has-sidebar': hasSidebar }">
     <!-- <VPNotFound v-if="isNotFound" /> -->
     <VPHeroContent v-if="isHeroPost" />
-    <!-- <VPDocContent v-else>
+    <VPDocContent v-else>
       <template #content-top><slot name="content-top" /></template>
       <template #content-bottom><slot name="content-bottom" /></template>
     </VPDocContent>
-    <VPFooter v-if="!isHeroPost" /> -->
+    <VPFooter v-if="!isHeroPost" />
   </main>
 </template>

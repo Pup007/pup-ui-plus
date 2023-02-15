@@ -26,7 +26,7 @@ useToggleWidgets(isSidebarOpen, () => {
     />
     <VPNav />
 
-     <VPContent :is-sidebar-open="isSidebarOpen">
+    <VPContent :is-sidebar-open="isSidebarOpen">
       <template #content-top>
         <slot name="content-top" />
       </template>
@@ -45,3 +45,6 @@ useToggleWidgets(isSidebarOpen, () => {
     </VPContent>
   </div>
 </template>
+
+<style scoped lang="scss">
+</style>
