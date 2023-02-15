@@ -38,10 +38,10 @@ const onNavClick = (item: Link) => {
     :no-icon="true"
     @click="onNavClick(item)"
   >
-    <!--  <el-badge v-if="isNewPage(item) && !isVisited" is-dot class="badge">
+    <el-badge v-if="isNewPage(item) && !isVisited" is-dot class="badge">
       {{ item.text }}</el-badge
     >
-    <template v-else> {{ item.text }}</template> -->
+    <template v-else> {{ item.text }}</template>
   </VPLink>
 </template>
 
