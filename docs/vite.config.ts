@@ -41,9 +41,12 @@ if (process.env.DOC_ENV !== 'production') {
 export default defineConfig(async ({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
 
+  /* packages/pup-ui-plus/package.json */
   const { dependencies: epDeps } = getPackageDependencies(epPackage)
+  /* docs/package.json */
   const { dependencies: docsDeps } = getPackageDependencies(docPackage)
 
+  //TODO: 学习到此处?
   const optimizeDeps = [...new Set([...epDeps, ...docsDeps])].filter(
     (dep) =>
       !dep.startsWith('@types/') &&
