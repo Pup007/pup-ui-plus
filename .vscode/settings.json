@@ -5,5 +5,6 @@
     "esbenp.prettier-vscode",
     "antfu.vite",
     "lokalise.i18n-ally"
-  ]
+  ],
+  "debug.focusWindowOnBreak": false
 }

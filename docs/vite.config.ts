@@ -114,6 +114,8 @@ export default defineConfig(async ({ mode }) => {
       MarkdownTransform(),
       //! 用于辅助插件开发
       Inspect(),
+      //! 使开发环境也支持使用https
+      // https://github.com/liuweiGL/vite-plugin-mkcert#readme
       mkcert(),
     ],
     optimizeDeps: {
